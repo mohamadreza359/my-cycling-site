@@ -7,74 +7,56 @@
   <style>
     body {
       font-family: sans-serif;
-      padding: 2rem;
       background-color: #f9f9f9;
-      transition: direction 0.3s;
+      padding: 2rem;
+      direction: rtl;
     }
-
-    form {
+    form, #commentsContainer {
       max-width: 600px;
-      margin: auto;
-      background: white;
+      margin: 1rem auto;
+      background: #fff;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-      direction: inherit;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
     input, textarea {
       width: 100%;
-      padding: 0.7rem;
+      padding: 0.8rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-size: 1rem;
     }
-
     input[type="submit"] {
       background-color: #007bff;
       color: white;
       border: none;
       cursor: pointer;
     }
-
     input[type="submit"]:hover {
       background-color: #0056b3;
     }
-
     #status {
       margin-top: 1rem;
+      color: green;
     }
-
+    #commentsList li {
+      list-style: none;
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 0;
+    }
     .lang-toggle {
       position: fixed;
       top: 1rem;
       left: 1rem;
     }
-
     .lang-toggle button {
       padding: 0.4rem 1rem;
-      font-size: 1rem;
       cursor: pointer;
-    }
-
-    #commentsContainer {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-    }
-
-    #commentsList li {
-      list-style: none;
-      border-bottom: 1px solid #ddd;
-      padding: 0.5rem 0;
     }
   </style>
 </head>
-<body dir="rtl">
+<body>
 
   <div class="lang-toggle">
     <button onclick="switchLang()">English</button>
