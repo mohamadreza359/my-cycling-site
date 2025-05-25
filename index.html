@@ -1,200 +1,185 @@
-<!DOCTYPE html><html lang="fa">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>رکورد دوچرخه‌سواری من | My Cycling Record</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثبت نظر / Feedback</title>
   <style>
     body {
       font-family: sans-serif;
-      background-color: #fffaf5;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-      color: #333;
-    }
-    header {
-      background-color: #ff9800;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #ff9800;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
       padding: 2rem;
+      background-color: #f9f9f9;
+      transition: direction 0.3s;
     }
-    .hero img {
-      width: 200px;
-      border-radius: 50%;
-    }
-    .section {
-      padding: 1.5rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .cta {
-      background-color: #ffe0b2;
-      text-align: center;
-      padding: 2rem;
-    }
-    .cta button {
-      background-color: #ff9800;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    footer {
-      background-color: #f5f5f5;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      direction: inherit;
     }
-    textarea, input[type="text"] {
-      padding: 10px;
-      border-radius: 6px;
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
+      border-radius: 5px;
       font-size: 1rem;
     }
+
     input[type="submit"] {
-      background-color: #ff9800;
+      background-color: #007bff;
       color: white;
       border: none;
-      padding: 10px;
-      border-radius: 6px;
       cursor: pointer;
     }
-    .lang-toggle {
-      text-align: center;
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #status {
       margin-top: 1rem;
     }
+
+    .lang-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+    }
+
     .lang-toggle button {
-      background: none;
-      border: none;
-      color: #ff9800;
-      font-weight: bold;
-      cursor: pointer;
+      padding: 0.4rem 1rem;
       font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #commentsContainer {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    #commentsList li {
+      list-style: none;
+      border-bottom: 1px solid #ddd;
+      padding: 0.5rem 0;
     }
   </style>
 </head>
-<body>
+<body dir="rtl">
+
   <div class="lang-toggle">
-    <button onclick="setLanguage('fa')">فارسی</button> | 
-    <button onclick="setLanguage('en')">English</button>
-  </div>  <header>
-    <h1 id="title">به سایت رسمی من خوش اومدی</h1>
-    <p id="subtitle">در مسیر ثبت یک رکورد دوچرخه‌سواری!</p>
-  </header>  <nav>
-    <a href="#about" id="nav-about">درباره من</a>
-    <a href="#goal" id="nav-goal">هدف من</a>
-    <a href="#support" id="nav-support">حمایت</a>
-    <a href="#comments" id="nav-comments">نظرات</a>
-    <a href="#contact" id="nav-contact">تماس</a>
-  </nav>  <section class="hero">
-    <img src="https://via.placeholder.com/200" alt="تصویر من">
-    <h2 id="hero-title">سلام! من یک دوچرخه‌سوار مشتاقم</h2>
-    <p id="hero-text">قراره رکوردی جدید ثبت کنم و برای این کار به حمایت شما نیاز دارم.</p>
-  </section>  <section class="section" id="goal">
-    <h3 id="goal-title">هدف من چیه؟</h3>
-    <p id="goal-text">
-      من قصد دارم در مدت زمان مشخص، طولانی‌ترین مسیر دوچرخه‌سواری مداوم رو طی کنم. این کار نیاز به تمرین، برنامه‌ریزی و حمایت مالی داره تا بتونم تجهیزات، خوراک و مسیر رو تأمین کنم.
-    </p>
-  </section>  <section class="cta" id="support">
-    <h3 id="support-title">مایل به حمایت هستی؟</h3>
-    <p id="support-text">می‌تونی با من تماس بگیری یا حمایتی مالی انجام بدی.</p>
-    <button id="support-button">حمایت مالی</button>
-  </section>  <section class="section" id="comments">
-    <h3 id="comment-title">ثبت نظرات</h3>
-    <form>
-      <input type="text" name="name" placeholder="نام شما" id="name-placeholder">
-      <textarea name="message" rows="4" placeholder="نظر خود را بنویسید..." id="msg-placeholder"></textarea>
-      <input type="submit" value="ارسال نظر" id="submit-button">
-    </form>
-  </section>  <footer id="contact">
-    <p id="contact-title">راه‌های ارتباطی:</p>
-    <p>اینستاگرام: @mycyclingrecord</p>
-    <p>ایمیل: myemail@example.com</p>
-  </footer>  <script>
-    function setLanguage(lang) {
-      if (lang === 'en') {
-        document.documentElement.lang = 'en';
-        document.body.style.direction = 'ltr';
+    <button onclick="switchLang()">English</button>
+  </div>
 
-        document.getElementById("title").innerText = "Welcome to My Official Website";
-        document.getElementById("subtitle").innerText = "On a journey to break a cycling record!";
+  <form id="commentForm">
+    <h2 id="formTitle">ارسال نظر</h2>
+    <input type="text" name="name" id="name" placeholder="نام شما" required />
+    <textarea name="message" id="message" rows="4" placeholder="نظر خود را بنویسید..." required></textarea>
+    <input type="submit" value="ارسال نظر" id="submitBtn" />
+    <p id="status"></p>
+  </form>
 
-        document.getElementById("nav-about").innerText = "About Me";
-        document.getElementById("nav-goal").innerText = "My Goal";
-        document.getElementById("nav-support").innerText = "Support";
-        document.getElementById("nav-comments").innerText = "Comments";
-        document.getElementById("nav-contact").innerText = "Contact";
+  <div id="commentsContainer">
+    <h3 id="commentsTitle">نظرات کاربران</h3>
+    <ul id="commentsList"></ul>
+  </div>
 
-        document.getElementById("hero-title").innerText = "Hi! I'm a passionate cyclist";
-        document.getElementById("hero-text").innerText = "I'm going to break a new record and I need your support.";
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzpIkR7NMhn5wef5E3-mYgT0zYEjZqQanEHlSehnb55JxdkGIsMl7sTCheY3mjC5f5VYQ/exec';
+    let lang = 'fa';
 
-        document.getElementById("goal-title").innerText = "What is my goal?";
-        document.getElementById("goal-text").innerText = "I plan to ride the longest distance in a continuous cycling effort. This requires training, planning, and financial support for equipment, food, and logistics.";
-
-        document.getElementById("support-title").innerText = "Want to Support?";
-        document.getElementById("support-text").innerText = "You can contact me or provide financial support.";
-        document.getElementById("support-button").innerText = "Donate";
-
-        document.getElementById("comment-title").innerText = "Leave a Comment";
-        document.getElementById("name-placeholder").placeholder = "Your name";
-        document.getElementById("msg-placeholder").placeholder = "Write your comment...";
-        document.getElementById("submit-button").value = "Send";
-
-        document.getElementById("contact-title").innerText = "Contact Info:";
-
-      } else {
-        document.documentElement.lang = 'fa';
-        document.body.style.direction = 'rtl';
-
-        document.getElementById("title").innerText = "به سایت رسمی من خوش اومدی";
-        document.getElementById("subtitle").innerText = "در مسیر ثبت یک رکورد دوچرخه‌سواری!";
-
-        document.getElementById("nav-about").innerText = "درباره من";
-        document.getElementById("nav-goal").innerText = "هدف من";
-        document.getElementById("nav-support").innerText = "حمایت";
-        document.getElementById("nav-comments").innerText = "نظرات";
-        document.getElementById("nav-contact").innerText = "تماس";
-
-        document.getElementById("hero-title").innerText = "سلام! من یک دوچرخه‌سوار مشتاقم";
-        document.getElementById("hero-text").innerText = "قراره رکوردی جدید ثبت کنم و برای این کار به حمایت شما نیاز دارم.";
-
-        document.getElementById("goal-title").innerText = "هدف من چیه؟";
-        document.getElementById("goal-text").innerText = "من قصد دارم در مدت زمان مشخص، طولانی‌ترین مسیر دوچرخه‌سواری مداوم رو طی کنم. این کار نیاز به تمرین، برنامه‌ریزی و حمایت مالی داره تا بتونم تجهیزات، خوراک و مسیر رو تأمین کنم.";
-
-        document.getElementById("support-title").innerText = "مایل به حمایت هستی؟";
-        document.getElementById("support-text").innerText = "می‌تونی با من تماس بگیری یا حمایتی مالی انجام بدی.";
-        document.getElementById("support-button").innerText = "حمایت مالی";
-
-        document.getElementById("comment-title").innerText = "ثبت نظرات";
-        document.getElementById("name-placeholder").placeholder = "نام شما";
-        document.getElementById("msg-placeholder").placeholder = "نظر خود را بنویسید...";
-        document.getElementById("submit-button").value = "ارسال نظر";
-
-        document.getElementById("contact-title").innerText = "راه‌های ارتباطی:";
+    const texts = {
+      fa: {
+        title: 'ارسال نظر',
+        namePlaceholder: 'نام شما',
+        messagePlaceholder: 'نظر خود را بنویسید...',
+        submit: 'ارسال نظر',
+        success: 'نظر شما با موفقیت ثبت شد!',
+        error: 'خطایی در ثبت نظر رخ داد.',
+        switchTo: 'English',
+        comments: 'نظرات کاربران',
+        dir: 'rtl'
+      },
+      en: {
+        title: 'Submit a Comment',
+        namePlaceholder: 'Your name',
+        messagePlaceholder: 'Write your comment...',
+        submit: 'Submit',
+        success: 'Your comment has been submitted!',
+        error: 'An error occurred. Please try again.',
+        switchTo: 'فارسی',
+        comments: 'User Comments',
+        dir: 'ltr'
       }
+    };
+
+    function switchLang() {
+      lang = (lang === 'fa') ? 'en' : 'fa';
+      const t = texts[lang];
+      document.getElementById('formTitle').innerText = t.title;
+      document.getElementById('name').placeholder = t.namePlaceholder;
+      document.getElementById('message').placeholder = t.messagePlaceholder;
+      document.getElementById('submitBtn').value = t.submit;
+      document.querySelector('.lang-toggle button').innerText = t.switchTo;
+      document.getElementById('commentsTitle').innerText = t.comments;
+      document.body.setAttribute('dir', t.dir);
     }
-  </script></body>
+
+    document.getElementById('commentForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const status = document.getElementById('status');
+
+      const data = {
+        name: document.getElementById('name').value,
+        message: document.getElementById('message').value,
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Error');
+          return response.text();
+        })
+        .then(text => {
+          status.innerText = texts[lang].success;
+          document.getElementById('commentForm').reset();
+          loadComments();
+        })
+        .catch(error => {
+          status.innerText = texts[lang].error;
+        });
+    });
+
+    function loadComments() {
+      fetch(scriptURL)
+        .then(res => res.json())
+        .then(comments => {
+          const list = document.getElementById('commentsList');
+          list.innerHTML = '';
+          comments.reverse().forEach(c => {
+            const li = document.createElement('li');
+            li.innerHTML = <strong>${c.name}:</strong> ${c.message};
+            list.appendChild(li);
+          });
+        });
+    }
+
+    loadComments();
+  </script>
+
+</body>
 </html>
